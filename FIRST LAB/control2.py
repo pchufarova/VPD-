@@ -6,7 +6,7 @@ voltages = [100, 80, 60, 40, 20, -20, -40, -60, -80, -100]
 motor_a = motor.LargeMotor(motor.OUTPUT_B)
 for vol in voltages:
     startTime = time.time()
-    f = open('data{}.csv'.format(vol),'w')
+    f = open('ГРАФИКИ МАТ. МОДЕЛЬ{}.csv'.format(vol),'w')
     while (True):
         currentTime = time.time() - startTime
         motor_pose = motor_a.position
