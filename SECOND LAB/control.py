@@ -14,5 +14,5 @@ for vol in voltages:
 
         if currentTime > 2:
             motor_a.run_direct(duty_cycle_sp = 0)
-            time.sleep(5)
+            time.sleep(2)
             break
