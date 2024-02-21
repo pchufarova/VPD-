@@ -1,7 +1,7 @@
 import ev3dev2.motor as motor
 import time
 
-voltages = [10, 15, 20, 25, 30, 35, 40, 45, 50]
+voltages = [10, 15, 20, 25, 30, 35, 40, 45, 50, -50, -45, -40, -35, -30, -25, -20, -15, -10]
 
 motor_a = motor.LargeMotor(motor.OUTPUT_B)
 for vol in voltages:
