@@ -12,7 +12,7 @@ for vol in voltages:
         # motor_vel = motor_a.speed
         motor_a.run_direct(duty_cycle_sp = vol)
 
-        if currentTime > 3:
+        if currentTime > 2:
             motor_a.run_direct(duty_cycle_sp = 0)
             time.sleep(10)
             break
