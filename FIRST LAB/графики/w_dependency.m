@@ -9,5 +9,6 @@ disp(w_nls);
 figure(1);
 plot(volts, w_nls, 'o', 'MarkerFaceColor', 'b', 'MarkerEdgeColor', 'k');
 plot(volts, w_nls)
-xlabel('voltage, %');
-ylabel('w_{ycm}, rad/c');
+xlabel('U, %');
+ylabel('\omega_{ycm}, rad/c');
+grid on;

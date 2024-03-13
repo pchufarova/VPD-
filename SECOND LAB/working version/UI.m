@@ -29,6 +29,7 @@ R_n = UiIi_n / I2_n ;
 R_p = UiIi_p / I2_p ;
 R = (R_n + R_p) / 2;
 
+
 U_n_formula = [1,2,3,4,5,6,7,8,9];
 U_p_formula = [1,2,3,4,5,6,7,8,9];
 for i = nums_9
@@ -59,7 +60,7 @@ grid on;
 hold on;
 plot(I_p, U_p);
 plot(I_p, U_p_formula);
-legend("measurements", "formula");
+legend("measurements", "approximation");
 hold off;
 
 figure(3);
@@ -70,7 +71,7 @@ grid on;
 hold on;
 plot(Iall, Uall);
 plot(Iall, U_formula);
-legend("measurements", "formula");
+legend("measurements", "approximation");
 hold off;
 
 move_n = [112.818, 90.7397, 71.1745, 54.1576, 39.6888, 27.8031, 18.4307, 11.1003, -0.0698132];
@@ -118,7 +119,7 @@ Km = Ke;
 
 figure(4);
 title("I(t)");
-xlabel("Time, sec");
+xlabel("t, c");
 ylabel("I, A");
 grid on;
 hold on;
@@ -133,9 +134,9 @@ legend('50', '45', '40', '35', '30', '25', '20', '15', '10', '-10', '-15', '-20'
 hold off;
 
 figure(5);
-title("0(t)");
-xlabel("Time, sec");
-ylabel("0, rad");
+title("\theta(t)");
+xlabel("t, c");
+ylabel("\theta, rad");
 grid on;
 hold on;
 for i = nums_18
@@ -158,8 +159,8 @@ legend('measurements', 'model');
 hold off;
 
 figure(6);
-title("U(w_{nls}) positive");
-xlabel("w_{nls}, rad/ sec");
+title("U(w_{ycm}) positive");
+xlabel("w_{ycm}, rad/c");
 ylabel("U, V");
 grid on;
 hold on;
@@ -169,8 +170,8 @@ legend("measurements", "approximation");
 hold off;
 
 figure(7);
-title("U(w_{nls}) negative");
-xlabel("w_{nls}, rad/ sec");
+title("U(w_{ycm}) negative");
+xlabel("w_{ycm}, rad/c");
 ylabel("U, V");
 grid on;
 hold on;
