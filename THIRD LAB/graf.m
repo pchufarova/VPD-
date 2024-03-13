@@ -3,7 +3,7 @@
 i = 1;
 %for vol = volts
 
-    data = readmatrix("data_rele.csv");
+    data = readmatrix("data_rele_10s.csv");
     angle = data(:,2);
     angle = angle*pi/180; 
     time = data(:,1)/1000;

@@ -25,7 +25,7 @@ for i in range(len(kp)):
 
         f.write("{} {}\n".format(currentTime, pose))
 
-        if currentTime > 3:
+        if currentTime > 10:
             motor_a.run_direct(duty_cycle_sp=0)
             time.sleep(1)
             break
