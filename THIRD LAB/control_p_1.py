@@ -3,8 +3,8 @@ import ev3dev2.motor as motor
 import time
 
 motor_a = motor.LargeMotor(motor.OUTPUT_B)
-angle_need = 90
-kp = [0.5, 1, 1.5, 2, 2.5, 3]
+angle_need = 180
+kp = [0.1, 0.3, 0.5, 0.7, 0.9, 1.1, 1.3, 1.5]
 
 for i in range(len(kp)):
     startTime = time.time()
@@ -25,7 +25,7 @@ for i in range(len(kp)):
 
 
 
-        if currentTime > 10:
+        if currentTime > 5:
             motor_a.run_direct(duty_cycle_sp=0)
             time.sleep(1)
             break
