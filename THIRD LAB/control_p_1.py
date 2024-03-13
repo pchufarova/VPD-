@@ -13,7 +13,7 @@ for i in range(len(kp)):
     while (True):
         currentTime = time.time() - startTime
         pose = motor_a.position - start_pose
-
+        f.write("{} {}\n".format(currentTime, pose))
         U = kp[i] * (angle_need - pose)
 
         if U > 100:
@@ -23,7 +23,7 @@ for i in range(len(kp)):
         else:
             motor_a.run_direct(duty_cycle_sp=U)
 
-        f.write("{} {}\n".format(currentTime, pose))
+
 
         if currentTime > 10:
             motor_a.run_direct(duty_cycle_sp=0)
