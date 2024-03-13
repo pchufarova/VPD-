@@ -23,6 +23,7 @@ for p in range(len(kp)):
                 e = angle_need - pose
                 integr_summ += e
                 U = kp[p]*e + ki[i]*integr_summ + kd[d]*(e-e_p)
+                motor_a.run_direct(duty_cycle_sp=U)
 
                 if currentTime > 2:
                     motor_a.run_direct(duty_cycle_sp=0)
