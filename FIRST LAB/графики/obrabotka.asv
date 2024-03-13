@@ -7,21 +7,16 @@ for vol = volts
     angle = data(:,2);
     angle = angle*pi/180 - move(i); 
     time = data(:,1)/1000;
-    omega = data(:,3)*pi/180;
     figure(1);
     plot(time, angle);
     hold on;
     grid on;
-    legend();
     xlabel("t, c");
     ylabel("\theta, rad");
-    figure(2);
-    plot(time, omega);
-    hold on;
-    grid on;
-    xlabel("t, c");
-    ylabel("\omega, rad/c");
     i = i + 1;
 
-
 end
+figure(1);
+legend("-100", "-80", "-60", "-40", "-20", "20", "40", "60", "80", "100");
+figure(2);
+legend("-100", "-80", "-60", "-40", "-20", "20", "40", "60", "80", "100");
