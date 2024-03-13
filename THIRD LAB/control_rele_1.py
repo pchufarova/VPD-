@@ -10,9 +10,10 @@ U = 100
 startTime = time.time()
 f = open('data_rele.csv', 'w')
 
+start_pose = motor_a.position
 while (True):
     currentTime = time.time() - startTime
-    pose = motor_a.position
+    pose = motor_a.position - start_pose
 
     if pose < angle_need:
         motor_a.run_direct(duty_cycle_sp=U)
